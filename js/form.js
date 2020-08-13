@@ -4,13 +4,19 @@ class Form{
         this.input = createInput("name");
         this.greeting = createElement("h3");
  }
+ hide(){
+     this.input.hide();
+     this.button.hide();
+     this.greeting.hide();
+
+ }
 display(){
     var title = createElement("h2");
     title.html("car Racing game");
     title.position(130,0);
     this.button.position(200,200);
     this.input.position(200,260);
-    this.button.mousePressed(function(){
+    this.button.mousePressed(()=>{
        this.input.hide();
        this.button.hide();
        player.name = this.input.value();
